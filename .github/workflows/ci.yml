@@ -6,6 +6,15 @@ on:
   pull_request:
     branches: ["main"]
   workflow_dispatch:
+    inputs:
+      base_url:
+        description: "Base URL da API"
+        required: false
+        default: "https://serverest.dev"
+      timeout:
+        description: "Timeout (ms)"
+        required: false
+        default: "10000"
 
 jobs:
   test:
