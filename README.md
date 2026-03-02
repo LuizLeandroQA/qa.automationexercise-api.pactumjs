@@ -64,9 +64,9 @@ qa.automationexercise-api.pactumjs
 │   │   └── fixtures.js             # Massa de dados estática
 │   │
 │   ├── schemas/                    # Validação de contrato (JSON Schema)
-│   │   ├── login.schema.js
-│   │   ├── produto.schema.js
-│   │   └── usuario.schema.js
+│   │   ├── login.schema.js         # Schema do contrato da resposta de login
+│   │   ├── produto.schema.js       # Schema do contrato da resposta de produtos
+│   │   └── usuario.schema.js       # Schema do contrato da resposta de usuários
 │   │
 │   └── utils/                      # Utilitários auxiliares
 │       ├── auth.js                 # Manipulação de autenticação/token
