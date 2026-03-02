@@ -38,6 +38,72 @@ O projeto segue uma arquitetura modular baseada em:
 
 ## 📁 Estrutura do Projeto
 
+```text
+qa.automationexercise-api.pactumjs
+│
+├── .github/
+│   └── workflows/
+│       └── ci.yml                  # Pipeline de CI (GitHub Actions)
+│
+├── node_modules/                   # Dependências do projeto
+├── report/                         # Relatórios gerados após execução
+│
+├── src/
+│   │
+│   ├── clients/                    # Camada responsável por chamadas HTTP
+│   │   ├── api.client.js           # Cliente base de configuração HTTP
+│   │   ├── login.client.js         # Endpoints relacionados a login
+│   │   ├── produtos.client.js      # Endpoints de produtos
+│   │   └── usuarios.client.js      # Endpoints de usuários
+│   │
+│   ├── config/
+│   │   ├── env.js                  # Carregamento e validação de variáveis de ambiente
+│   │   └── pactum.config.js        # Configuração global do PactumJS
+│   │
+│   ├── data/
+│   │   └── fixtures.js             # Massa de dados estática
+│   │
+│   ├── schemas/                    # Validação de contrato (JSON Schema)
+│   │   ├── login.schema.js
+│   │   ├── produto.schema.js
+│   │   └── usuario.schema.js
+│   │
+│   └── utils/                      # Utilitários auxiliares
+│       ├── auth.js                 # Manipulação de autenticação/token
+│       ├── factory.js              # Geração dinâmica de dados
+│       └── validator.js            # Validações reutilizáveis
+│
+├── test/
+│   └── specs/
+│       ├── login/
+│       │   └── login.spec.js       # Testes de autenticação
+│       │
+│       ├── produtos/
+│       │   └── produto.spec.js     # Testes de produtos
+│       │
+│       └── usuarios/
+│           └── usuario.spec.js     # Testes de usuários
+│
+├── .env.example                    # Modelo de variáveis de ambiente
+├── .gitignore                      # Arquivos ignorados pelo Git
+├── image-1.png                     # Imagem ilustrativa (README)
+├── image.png                       # Imagem ilustrativa (README)
+├── package.json                    # Dependências e scripts do projeto
+├── package-lock.json               # Lock de versões das dependências
+└── README.md                       # Documentação do projeto
+
+---
+
+### 📌 Organização Arquitetural
+
+O projeto segue uma arquitetura modular baseada em separação de responsabilidades:
+
+- *Clients* → Encapsulam chamadas HTTP
+- *Schemas* → Validação de contrato (JSON Schema)
+- *Utils* → Autenticação, geração de dados e validações auxiliares
+- *Specs* → Cenários organizados por domínio
+- *Config* → Configuração global e variáveis de ambiente
+
 ---
 
 ## ⚙️ Configuração do Ambiente
@@ -61,11 +127,10 @@ cp .env.example .env
 BASE_URL=
 TOKEN=
 
-Variável	Descrição	                    Valor padrão
-
-BASE_URL	URL base da API	                https://serverest.dev
-
-TIMEOUT	    Timeout das requisições (ms)	10000
+| Variável  | Descrição                    | Valor padrão              |
+|----------|-------------------------------|---------------------------|
+| BASE_URL | URL base da API               | `https://serverest.dev`   |
+| TIMEOUT  | Timeout das requisições (ms)  | `10000`                   |
 
 ---
 
