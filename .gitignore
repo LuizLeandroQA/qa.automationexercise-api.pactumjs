@@ -1,5 +1,14 @@
 node_modules/
+.env
+.env.*
+!.env.example
 report/
 allure-results/
-.env
+allure-report/
+coverage/
+logs/
+*.log
 .DS_Store
+Thumbs.db
+.vscode/
+.idea/
