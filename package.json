@@ -1,16 +1,28 @@
 {
   "name": "qa.automationexercise-api.pactumjs",
   "version": "1.0.0",
-  "description": "API Automation using PactumJS + Joi",
+  "description": "Automação de testes de API utilizando PactumJS + Joi, seguindo padrão Triple A, validação de contrato, geração de massa dinâmica e relatório com Mochawesome.",
   "main": "index.js",
   "scripts": {
-  "test": "mocha \"test/specs/**/*.spec.js\" --timeout 10000",
-  "test:login": "mocha \"test/specs/login/*.spec.js\" --timeout 10000",
-  "test:usuarios": "mocha \"test/specs/usuarios/*.spec.js\" --timeout 10000",
-  "test:produtos": "mocha \"test/specs/produtos/*.spec.js\" --timeout 10000",
-  "report": "mocha \"test/specs/**/*.spec.js\" --timeout 10000 --reporter mochawesome --reporter-options reportDir=report,reportFilename=mochawesome,html=true,json=true"
+    "test": "mocha \"test/specs/**/*.spec.js\" --timeout 10000",
+    "test:login": "mocha \"test/specs/login/*.spec.js\" --timeout 10000",
+    "test:usuarios": "mocha \"test/specs/usuarios/*.spec.js\" --timeout 10000",
+    "test:produtos": "mocha \"test/specs/produtos/*.spec.js\" --timeout 10000",
+    "report": "mocha \"test/specs/**/*.spec.js\" --timeout 10000 --reporter mochawesome --reporter-options reportDir=report,reportFilename=mochawesome,html=true,json=true"
   },
-  "author": "",
+  "keywords": [
+    "qa",
+    "automação de testes",
+    "testes de api",
+    "pactumjs",
+    "joi",
+    "validação de contrato",
+    "mocha",
+    "mochawesome",
+    "triple a",
+    "api testing"
+  ],
+  "author": "Projeto de Automação QA",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^17.3.1"
